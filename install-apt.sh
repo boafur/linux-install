@@ -160,6 +160,8 @@ sudo apt install -y tcpflow
 sudo pip3 install scapy
 sudo apt install libcompress-raw-lzma-perl
 sudo apt install libcompress-raw-lzma-perl
+# Grab the flutter sdk
+sudo snap install flutter --classic
 rm *.deb
 
 echo "Please run the bluetooth, audio, and hibernation install scripts if on mac, then restart the machine."
