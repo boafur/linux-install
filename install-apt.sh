@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Just some color functions from John Hammond's script
+# Some color functions from John Hammond's script
 RED=`tput bold && tput setaf 1`
 GREEN=`tput bold && tput setaf 2`
 YELLOW=`tput bold && tput setaf 3`
@@ -34,10 +34,12 @@ rmdir ~/Desktop ~/Music ~/Pictures ~/Public ~/Templates ~/Videos
 # Install dependencies
 sudo apt update
 sudo apt install -y git python3.8 python3-pip3 wget make gcc linux-headers-generic default-jdk default-jre build-essential cmake terminator nmap
+# Install Google Chrome
+wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O chrome.deb
+dpkg -i chrome.deb
+# Install atom
 wget "https://atom.io/download/deb" -O atom.deb
 dpkg -i atom.deb
-rm atom.deb
-
 # Optional: Set terminator as the default terminal emulator
 # sed -i s/Exec=gnome-terminal/Exec=terminator/g /usr/share/applications/gnome-terminal.desktop
 
@@ -88,7 +90,6 @@ sudo apt-get install -y sqlitebrowser
 sudo apt-get install -y wireshark
 wget "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.17.1113-Linux-x64.deb" -O vnc_viewer.deb
 dpkg -i vnc_viewer.deb
-rm vnc_viewer.deb
 sudo apt install -y xclip
 grep "alias xclip" ~/.bashrc
 if [ $? -eq 1 ]
@@ -129,7 +130,6 @@ sudo apt install -y virtualbox-qt
 sudo apt install -y vagrant
 wget "https://d2ap6ypl1xbe4k.cloudfront.net/Hopper-v4-4.3.14-Linux.deb"
 dpkg -i Hopper-v4-4.3.14-Linux.deb
-rm Hopper-v4-4.3.14-Linux.deb
 echo "" | sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install -y oracle-java8-installer
@@ -151,5 +151,6 @@ sudo apt install -y tcpflow
 sudo pip3 install scapy
 sudo apt install libcompress-raw-lzma-perl
 sudo apt install libcompress-raw-lzma-perl
+rm *.deb
 
 echo "Please run the bluetooth, audio, and hibernation install scripts if on mac, then restart the machine."
