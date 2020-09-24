@@ -16,6 +16,14 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install java 15.0.0.hs-adpt
 sdk install java 11.0.8.hs-adpt
 sdk install java 8.0.265.hs-adpt
+# Install nmap so rustscan can work
+cd ~/Downloads
+wget "https://nmap.org/dist/nmap-7.80.tar.bz2"
+bzip2 -cd nmap-7.80.tar.bz2 | tar xvf -
+cd nmap-7.80/
+./configure
+make
+sudo make install
 # More dependencies
 brew install gcc
 brew install rustscan
