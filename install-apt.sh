@@ -47,6 +47,8 @@ conda create -n my_conda python=3
 source activate my_conda
 conda install ipykernel
 python -m ipykernel install
+rm miniconda.sh
+# rm anaconda.sh # Uncomment if you are installing full anaconda
 # Optional: Set terminator as the default terminal emulator
 # sed -i s/Exec=gnome-terminal/Exec=terminator/g /usr/share/applications/gnome-terminal.desktop
 
