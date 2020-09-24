@@ -40,6 +40,13 @@ dpkg -i chrome.deb
 # Install atom
 wget "https://atom.io/download/deb" -O atom.deb
 dpkg -i atom.deb
+# Install and setup conda
+wget "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh" -O miniconda.sh | bash
+# wget "https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh" -O anaconda.sh # Uncomment if you want full anaconda
+conda create -n my_conda python=3
+source activate my_conda
+conda install ipykernel
+python -m ipykernel install
 # Optional: Set terminator as the default terminal emulator
 # sed -i s/Exec=gnome-terminal/Exec=terminator/g /usr/share/applications/gnome-terminal.desktop
 
