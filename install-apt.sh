@@ -23,7 +23,7 @@ function BLUE(){
 # If you're not root then kill the script
 if [ $UID -ne 0 ]
 then
-	RED "You must run this script as root!" && echo
+	RED "You must run this script WITH SUDO, NOT AS THE ROOT USER!" && echo
 	exit
 fi
 
