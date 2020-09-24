@@ -1,0 +1,9 @@
+[Unit]
+Description=Allows hibernation on macbooks
+
+[Service]
+ExecStart=/usr/local/bin/hibernation.sh
+
+[Install]
+WantedBy=multi-user.target
+
