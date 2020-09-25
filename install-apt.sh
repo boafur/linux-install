@@ -51,6 +51,8 @@ source activate my_conda
 conda install ipykernel
 python -m ipykernel install
 rm miniconda.sh
+# Python modules
+python3 -m pip install 'python-language-server[all]' black discord.py[voice]>=1.4.1 asyncio~=3.4.3 datetime>=4.3 pillow<=7.2.0 cogs bs4 pymongo>=3.11.0 motor>=2.2.0 googletrans>=3.0.0 aiohttp TextToOwO>=2.0.1 urbandict>=0.6.1 e>=1.4.5 youtube_dl tweepy asteval dnspython>=2.0.0 PyNaCl>=1.4.0
 # rm anaconda.sh # Uncomment if you are installing full anaconda
 # Optional: Set terminator as the default terminal emulator
 # sed -i s/Exec=gnome-terminal/Exec=terminator/g /usr/share/applications/gnome-terminal.desktop
