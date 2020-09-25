@@ -37,6 +37,9 @@ sudo apt install -y git python3.8 python3-pip3 wget make gcc linux-headers-gener
 # Install Google Chrome
 wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O chrome.deb
 dpkg -i chrome.deb
+# Install zoom
+wget "https://zoom.us/client/latest/zoom_amd64.deb" -O zoom.deb
+dpkg -i zoom.deb
 # Install atom
 wget "https://atom.io/download/deb" -O atom.deb
 dpkg -i atom.deb
