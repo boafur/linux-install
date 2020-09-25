@@ -33,7 +33,7 @@ mkdir ~/Workspace
 rmdir ~/Desktop ~/Music ~/Pictures ~/Public ~/Templates ~/Videos
 # Install dependencies
 sudo apt update
-sudo apt install -y git python3.8 python3-pip3 wget make gcc linux-headers-generic default-jdk default-jre build-essential cmake terminator nmap
+sudo apt install -y git python3.8 python3-pip3 wget make gcc linux-headers-generic default-jdk default-jre build-essential cmake terminator nmap libxcb-xtest0
 # Install Google Chrome
 wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O chrome.deb
 dpkg -i chrome.deb
